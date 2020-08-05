@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:  Helvetica;
+    background-color: #D5E4E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 70vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    background: url("images/Image.png") no-repeat center center/cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.card h1{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card p{
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    max-width: 80%;
+    line-height: 1.3;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+.buttons .btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #D6D5E4;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #fff;
+
+}
+.buttons .btn i{
+    color: #00A793;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 167, 147, 0.3);
+    border: 1px solid rgba(0, 167, 147);
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+}
+.btn p{
+    font-size: 14px;
+
+}
+.active{
+    color: #fff;
+    background: -webkit-linear-gradient(to right, #10BAB6, #006D6F); 
+    background: linear-gradient(to right, #10BAB6, #006D6F); 
+}
+.active i{
+    color: #fff!important;
+    background-color:transparent!important;
+    border-color: rgba(255, 255, 255, 0.5)!important;
+}
+@media(max-width: 1120px){
+    .buttons{
+        grid-template-columns: 1fr;
+    }
+    .container{
+        height: auto;
+    }
+    .btn{
+        width: 70%;
+    }
+}
+@media(max-width: 900px){
+    body{
+        padding: 50px;
+        height: auto;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 130vh;
+    }
+    .image{
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+    .card{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .buttons{
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        width: 90%;
+    }
+}
